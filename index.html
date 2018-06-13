@@ -12,13 +12,14 @@
 	<link rel="stylesheet" href="css/layout.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
 <header>
 	<nav class="top-menu">
   <ul class="menu-main">
-    <li><a href="" class="current">Home</a></li>
+    <li><a href="">Home</a></li>
     <li><a href="">My Story</a></li>
     <li><a href="">Gallery</a></li>
 		<li><a href="">Blog</a></li>
@@ -45,13 +46,19 @@
 									<div class="infologo">
 										<img src="img/1.png" alt="">
 									</div>
+
+									<button type="button" name="button" class="scroll-down">scroll</button>
+
 			</div>
-			<div class="six">
-				<div class="six-pic1">
+			<div class="six slider-wrap">
+				<div class="six-pic1 slide">
 					<img src="img/4.png" alt="">'Pation'<br>90cm*60cm<br>2017
 				</div>
-				<div class="six-pic2">
+				<div class="six-pic1 slide">
 						<img src="img/5.png" alt="">'Pation'<br>90cm*60cm<br>2017
+				</div>
+				<div class="six-pic1 slide">
+						<img src="img/4.png" alt="">'Pation'<br>90cm*60cm<br>2017
 				</div>
 			</div>
 </div>
@@ -75,7 +82,29 @@
 <footer>
 <h6>2018 TatibiArt. All Rights Reserved</h6>
 <h5>tatibiart@mail.com</h5>
-<span class="icons"><i class="fab fa-facebook-f"></i>
-<i class="fab fa-instagram"></i></span>
+<span class="icons"><i class="fab fa-facebook-f"></i></span>
+<span class="icons facebook"><i class="fab fa-instagram"></i></span>
 </footer>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script>
+        $(document).ready(function(){
+          $('.slider-wrap').slick({
+                autoplay: true,
+                autoplaySpeed: 1000,
+                infinite: true,
+                slidesToShow: 2,
+                arrows: false,
+
+            });
+
+					$('.scroll-down').click(function(){
+						$(window).scrollTop('1000')
+					});
+
+        });
+    </script>
 </html>
